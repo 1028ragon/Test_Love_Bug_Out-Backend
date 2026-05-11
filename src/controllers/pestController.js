@@ -27,7 +27,7 @@ const analyzePest = async (req, res) => {
     if (err.status === 429) {
       return res.status(429).json({
         status: "error",
-        message: "AI 무료 사용량을 초과했습니다. 잠시 후 다시 시도해주세요.",
+        message: "AI 무료 사용량을 초과했습니다. 잠시 후 다시 시도하세요.",
       });
     }
 
@@ -35,7 +35,7 @@ const analyzePest = async (req, res) => {
     if (err.status === 503) {
       return res.status(503).json({
         status: "error",
-        message: "AI 서버가 현재 혼잡합니다. 잠시 후 다시 시도해주세요.",
+        message: "AI 서버가 현재 혼잡합니다. 잠시 후 다시 시도하세요.",
       });
     }
 
